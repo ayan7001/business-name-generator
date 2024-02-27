@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business name generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+      .each {
+        font-size: 14px !important;
+      }
+      .industry {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .each {
+        display: flex;
+        width: 200px;
+        height: 40px;
+        border: 1px solid black;
+
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 14px !important;
+      }
+      .selected {
+        display: flex;
+        width: 200px;
+        height: 40px;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: aqua;
+        font-size: 14px !important;
+      }
+      button {
+        display: block;
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: rgb(213, 228, 228);
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .answer {
+        width: 360px;
+        height: 1px;
+        background-color: white;
+        margin-bottom: 40px;
+      }
+      .answer[output="on"] {
+        width: 360px;
+        height: 100px;
+        margin-bottom: 40px;
+        background-color: rgb(231, 201, 201);
+        transition: all ease-in-out 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+      }
+      h3 {
+        font-style: italic;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Business name generator</h1>
+    <h2>Choose your industry:</h2>
+    <h3>Choose "Car" option for the demo</h3>
+    <div class="answer" output="off"></div>
+    <div class="industry" clicked="false">
+      <div class="each" id="car">car</div>
+      <div class="each" id="development">software or web development</div>
+      <div class="each" id="food">food</div>
+      <div class="each" id="health">health</div>
+      <div class="each" id="travel">travel</div>
+    </div>
+    <button id="generatebutton">Generate</button>
+    <script src="./index.js" charset="UTF-8"></script>
+  </body>
+</html>
